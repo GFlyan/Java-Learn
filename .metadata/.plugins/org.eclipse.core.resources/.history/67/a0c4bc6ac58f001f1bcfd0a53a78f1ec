@@ -1,0 +1,9 @@
+package aula;
+
+public class aula {
+	public static void main(String[] args) {
+		float a = 3.0f;
+		double b = a;
+		System.out.println(b);
+	}
+}

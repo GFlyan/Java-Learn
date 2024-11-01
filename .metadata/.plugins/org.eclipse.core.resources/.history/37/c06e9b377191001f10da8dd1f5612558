@@ -1,0 +1,10 @@
+package aaa;
+
+import javax.swing.JOptionPane;
+
+public class aula {
+	public static void main(String[] args) {
+		int num = 1;
+		JOptionPane.showMessageDialog(null, num);
+	}
+}

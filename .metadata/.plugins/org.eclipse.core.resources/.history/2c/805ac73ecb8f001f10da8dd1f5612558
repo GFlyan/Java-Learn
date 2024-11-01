@@ -1,0 +1,10 @@
+/**
+ * 
+ */
+/**
+ * 
+ */
+
+module AULA {
+	requires java.desktop;
+}

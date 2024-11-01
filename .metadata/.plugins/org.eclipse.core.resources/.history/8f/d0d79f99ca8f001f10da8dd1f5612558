@@ -1,0 +1,9 @@
+package aula;
+
+import javax.swing.JOptionPane;
+
+public class aula {
+	public static void main(String[] args) {
+		String word = JOptionPane.showInputDialog("Digite seu nome: ");
+	}
+}

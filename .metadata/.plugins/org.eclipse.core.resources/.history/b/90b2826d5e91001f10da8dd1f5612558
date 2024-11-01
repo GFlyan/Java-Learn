@@ -1,0 +1,8 @@
+import java.util.Scanner;
+
+import javax.swing.JOptionPane;
+public class TEST {
+	public static void main(String[] args) {
+		JOptionPane.showMessageDialog(null, "OLÁ");
+	}
+}

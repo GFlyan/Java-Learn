@@ -1,0 +1,10 @@
+import java.util.Scanner;
+
+import javax.swing.JOptionPane;
+public class TEST {
+	public static void main(String[] args) {
+		int num = 1;
+		String palavra = JOptionPane.showInputDialog();
+		JOptionPane.showMessageDialog(null, num);
+	}
+}

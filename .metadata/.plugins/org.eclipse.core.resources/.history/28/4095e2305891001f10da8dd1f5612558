@@ -1,0 +1,59 @@
+package aula;
+
+import java.util.Scanner;
+
+public class Aula {
+	
+	public static void main(String[] args) {
+		
+		//Programa que calcula a area e perimetro de figuras geométricas
+		//Usando a entrada e saida textual
+		
+		Scanner scan = new Scanner(System.in);
+		
+		//Começar a interagir com o usuário
+		String mensagemInicial = 
+				"Informe qual a figura desejada:\n"
+				+ "1 - Quadrado\n"
+				+ "2 - Retângulo\n"
+				+ "...\n"
+				+ "0 - Sair";	
+		System.out.println(mensagemInicial);
+		
+		//Ler opção do teclado
+		int opcao = scan.nextInt();
+		System.out.println(opcao);
+		
+		switch (opcao) {
+		case 1: {
+			//Armazena o valor do lado do quadrado
+			String mensagem = "Informe o valor do lado do quadrado:";
+			System.out.println(mensagem);
+			double ladoQuadrado = scan.nextDouble();
+			
+			//Calcula área e perimetro do quadrado
+			double perimetroQuadrado = 4 * ladoQuadrado;
+			double areaQuadrado = Math.pow(ladoQuadrado, 2);
+			
+			//Resposta ao usuário
+			String resposta = 
+					"O perimetro do quadrado é: " + perimetroQuadrado + ".\n"
+					+ "A área do quadrado é: " + areaQuadrado + ".";
+			System.out.println(resposta);
+			
+			break;
+			}
+/*		case 2: {
+			
+			break;
+			}
+		case 0: {
+			
+			break;
+			}*/
+		}
+		
+		scan.close();
+	}
+
+}

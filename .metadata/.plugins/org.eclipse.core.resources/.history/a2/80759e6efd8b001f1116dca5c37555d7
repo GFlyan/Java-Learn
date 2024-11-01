@@ -1,0 +1,14 @@
+import java.util.Scanner;
+public class TEST {
+	public static void main(String[] args) {
+		Scanner scan = new Scanner(System.in);
+		int firstNumber = scan.nextInt();
+		int secondNumber = scan.nextInt();
+		if(firstNumber > secondNumber) {
+			System.out.println("O primeiro número fornecido é maior.");
+		} else {
+			System.out.println("Ou o primeiro número é igual ao segundo ou é menor.")
+		}
+		scan.close();
+	}
+}

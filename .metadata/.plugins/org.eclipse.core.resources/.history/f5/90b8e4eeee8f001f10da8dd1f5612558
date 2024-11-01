@@ -1,0 +1,15 @@
+import java.util.Scanner;
+
+public class Ex004 {
+	public static void main(String[] args) {
+		Scanner scan = new Scanner(System.in);
+		double acumulate = 1;
+		for(int c = 1; c <= 3; c++) {
+			System.out.println("Digite o " + c + "º numero:");
+			acumulate *= scan.nextDouble();
+			}
+		double acumulateVersion = (acumulate ^ 2.0);
+		System.out.println(acumulateVersion);
+		//System.out.println("A média entre os número fornecidos é: " + (acumulate ^ (1/3));
+	}
+}
