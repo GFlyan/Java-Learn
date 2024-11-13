@@ -1,16 +1,6 @@
-package exercicios_pre_prova;
 import java.util.Scanner;
-import java.lang.String;
-import javax.swing.JOptionPane;
 
-/*
-Faça um programa que leia um conjunto X de valores compreendidos 
-entre [ min, max ], em que min e max representam os valores inferior 
-e superior do intervalo. Ao final de sua execução o programa deverá imprimir 
-o histograma do intervalo.
-*/
-
-public class Ex001 {
+public class TESTING {
 	public static void main(String[] args) {
 		Scanner scan = new Scanner(System.in);
 		
@@ -31,7 +21,7 @@ public class Ex001 {
 		
 		//Calculando o fluxo do incidência para o histograma
 		int userValue; //Valor fornecido pelo usuário
-		String acumulate = "";
+		String acumulateStr = "";
 		do {
 			System.out.println("Forneça valores em um raio de: ["+ min + "," + max + "]");
 			userValue = scan.nextInt();
@@ -39,7 +29,7 @@ public class Ex001 {
 				System.out.println("Você digitou um valor não permitido.");
 				break;
 			}
-			acumulate += userValue; /*Caso userValue seja válido será 
+			acumulateStr += userValue; /*Caso userValue seja válido será 
 									  armazenado em uma "pilha" onde 
 									  a verificação de incidências será 
 									  feita posteriormente*/
@@ -47,17 +37,22 @@ public class Ex001 {
 		}
 		while((userValue>=min)&&(userValue<=max));
 		
+		
 		//
+		System.out.println("----------");
+		System.out.println("HISTOGRAMA");
+		System.out.println("----------");
 		for(int counterRange = 0; counterRange<size ; counterRange++) {//Percorre o vetor range para verificar a incidencia dos valores fornecidos
 			int incidencia=0;
-			for(int counterAcumulate = 0; counterAcumulate < acumulate.length(); counterAcumulate++ ) { //Percorre a cadeia acumulate
-				if(acumulate.charAt(counterAcumulate) == range[counterRange]) {
+			for(int counterAcumulate = 0; counterAcumulate < acumulateStr.length(); counterAcumulate++ ) { //Percorre a cadeia acumulate
+				int acumulateStrInt = Integer.parseInt(Character.toString(acumulateStr.charAt(counterAcumulate)));		
+				if(acumulateStrInt == range[counterRange]) {
 					incidencia++;
 				}
-				String astherisc = "*";
-				System.out.println(range[counterRange] + astherisc.repeat(incidencia));
+
 			}
-				
+
+			System.out.println(range[counterRange]+ " " + "*".repeat(incidencia));
 		}
 				
 		scan.close();
